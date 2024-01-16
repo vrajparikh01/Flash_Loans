@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: MIT
-
 pragma solidity >=0.6.0;
 
 import "../interfaces/IERC20.sol";
@@ -88,13 +87,9 @@ library SafeERC20 {
 
     function safeDecreaseAllowance(
         IERC20 token,
-        address spender,
-        uint256 value
+        address spender
     ) internal {
-        uint256 newAllowance = token.allowance(address(this), spender).sub(
-            value,
-            "SafeERC20: decreased allowance below zero"
-        );
+        uint256 newAllowance = token.allowance(address(this), spender);
         _callOptionalReturn(
             token,
             abi.encodeWithSelector(
