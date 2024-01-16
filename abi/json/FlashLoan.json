@@ -1,0 +1,48 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_busd",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "initiateArbitrage",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_sender",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount0",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount1",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "_data",
+        "type": "bytes"
+      }
+    ],
+    "name": "pancakeCall",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
