@@ -24,6 +24,10 @@ contract FlashLoan {
     uint private deadline = block.timestamp + 1 days;
     uint private constant MAX_INT = 115792089237316195423570985008687907853269984665640564039457584007913129639935;
 
+    function getTokenBalance(address _addr) public view returns(uint){
+        return IERC20(_addr).balanceOf(address(this));
+    }
+
     function checkResult(uint _repayAmt, uint _tradedCoin) private pure returns(bool){
         return _repayAmt> _tradedCoin;
     }
