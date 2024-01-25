@@ -9,7 +9,7 @@ const defaultKey =
 
 const ACCOUNT_PRIVATE_KEY = process.env.ACCOUNT_PRIVATE_KEY;
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
-const MUMBAI_URL = process.env.GOERLI_URL;
+const MUMBAI_URL = process.env.MUMBAI_URL;
 const OPTIMIZER_RUNS = process.env.OPTIMIZER_RUNS;
 const OPTIMIZER_FLAG = process.env.OPTIMIZER_FLAG;
 
@@ -35,9 +35,7 @@ module.exports = {
   },
   networks: {
     mumbai: {
-      url:
-        MUMBAI_URL ||
-        "https://polygon-mumbai.g.alchemy.com/v2/ystrrbBKtsvf4x416CItuRU6mn7QlEB9",
+      url: MUMBAI_URL,
       accounts: [ACCOUNT_PRIVATE_KEY || defaultKey],
     },
     hardhat: {

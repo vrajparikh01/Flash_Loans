@@ -1,7 +1,7 @@
-const { ethers } = require("hardhat");
+const hre = require("hardhat");
 
 async function main() {
-  const FlashLoan = await ethers.getContractFactory("FlashLoan");
+  const FlashLoan = await hre.ethers.getContractFactory("FlashLoan");
   let flashLoan = await FlashLoan.deploy();
   console.log("Flash Loan contract deployed to: ", flashLoan.target);
 }
