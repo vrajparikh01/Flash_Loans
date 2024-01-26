@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is about the flash loan-based triangular arbitrage on the Polygon blockchain. It's designed to leverage price differences between assets on PancakeSwap, aiming to generate profits through successive trades within a single transaction block.
+This project is about the flash loan-based triangular arbitrage on the Polygon blockchain. It's designed to leverage price differences between assets (BUSD, CROX and CAKE tokens) on PancakeSwap, aiming to generate profits through successive trades within a single transaction block
 
 ## Contract Functionality
 
