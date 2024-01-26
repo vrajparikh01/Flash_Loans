@@ -5,10 +5,7 @@ const fundToken = async (contract, sender, recipient, amount) => {
   const fundAmt = ethers.parseUnits(amount, 18);
 
   const whale = await ethers.getSigner(sender);
-
-  console.log("hey");
   const contractSigner = contract.connect(whale);
-  console.log("heyy");
   await contractSigner.transfer(recipient, fundAmt);
 };
 
@@ -19,15 +16,12 @@ const fundContract = async (contract, sender, recipient, amount) => {
     params: [sender],
   });
 
-  console.log("heyyy");
   await fundToken(contract, sender, recipient, amount);
 
-  console.log("heyyyy");
   await network.provider.request({
     method: "hardhat_stopImpersonatingAccount",
     params: [sender],
   });
-  console.log("heyyyyy");
 };
 
 module.exports = {
